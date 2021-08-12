@@ -35,3 +35,9 @@ This sketch might help you understand the provided test data better:
 	 F1 F2 F3 F4 F5 F6 F7 F8 F9 F10
 	G1 G2 G3 G4 G5 G6 G7 G8 G9 G10
 
+Notes
+-----
+
+This is actually a fork from Emily Bache's repository: https://github.com/emilybache/Theater-Kata. So all praise for her, not me!
+
+To match it more to the context of my current team, I switched from approval tests to AssertJ. I also moved some code around as I was confused about the structure I found.

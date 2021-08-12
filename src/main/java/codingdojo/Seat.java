@@ -1,9 +1,12 @@
 package codingdojo;
 
+import lombok.EqualsAndHashCode;
+
+@EqualsAndHashCode
 public class Seat {
 
-    public final String row;
-    public final int seatNumber;
+    final String row;
+    final int seatNumber;
 
     public Seat(String row, int seatNumber) {
         this.row = row;

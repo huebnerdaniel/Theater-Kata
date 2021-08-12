@@ -3,15 +3,13 @@ package codingdojo;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
-import java.util.HashMap;
-import java.util.Arrays;
 
 /**
  * Read-only data about which rows and seats a particular theater has.
  */
 public class Theater {
 
-    public final List<Seat> seats = new ArrayList<Seat>();
+    public final List<Seat> seats = new ArrayList<>();
     
     public Theater(Map<String, List<Integer>> seatData) {
         for (String row : seatData.keySet()) {
@@ -22,6 +20,6 @@ public class Theater {
     }
 
     public List<Seat> getAvailableSeats() {
-        return new ArrayList<Seat>(this.seats);
+        return new ArrayList<>(this.seats);
     }
 }
