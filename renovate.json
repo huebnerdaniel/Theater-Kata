@@ -4,7 +4,7 @@
   "forkProcessing": "enabled",
   "prConcurrentLimit": 20,
   "prHourlyLimit": 100,
-  "extends": ["config:recommended", ":dependencyDashboard", ":automergeMinor", ":automergePatch"],
+  "extends": ["config:recommended", ":dependencyDashboard", ":automergeMinor", ":automergePatch", ":automergePr"],
   "automergeSchedule": [
     "before 6pm every weekday"
   ],
