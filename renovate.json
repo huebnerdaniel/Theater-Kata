@@ -8,6 +8,10 @@
     {
       "matchManagers": ["maven"],
       "groupName": "maven"
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "groupName": "github-actions"
     }
   ]
 }
