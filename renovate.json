@@ -3,7 +3,7 @@
   "timezone": "Europe/Berlin",
   "forkProcessing": "enabled",
   "prConcurrentLimit": 20,
-  "extends": ["config:best-practices", ":dependencyDashboard"],
+  "extends": ["config:recommended", ":dependencyDashboard"],
   "packageRules": [
     {
       "matchManagers": ["maven"],
