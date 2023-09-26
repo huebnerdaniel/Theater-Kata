@@ -2,5 +2,11 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "timezone": "Europe/Berlin",
   "forkProcessing": "enabled",
-  "extends": ["config:recommended", ":dependencyDashboard"]
+  "extends": ["config:best-practices", ":dependencyDashboard"],
+  "packageRules": [
+    {
+      "matchManagers": ["maven"],
+      "groupName": "maven"
+    }
+  ]
 }
