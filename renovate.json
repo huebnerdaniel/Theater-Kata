@@ -4,7 +4,10 @@
   "forkProcessing": "enabled",
   "prConcurrentLimit": 20,
   "prHourlyLimit": 100,
-  "extends": ["config:recommended", ":dependencyDashboard"],
+  "extends": ["config:recommended", ":dependencyDashboard", ":automergeMinor", ":automergePatch"],
+  "automergeSchedule": [
+    "before 6pm on Tuesday"
+  ],
   "packageRules": [
     {
       "matchManagers": ["maven"],
