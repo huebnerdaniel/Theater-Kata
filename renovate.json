@@ -2,5 +2,11 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "timezone": "Europe/Berlin",
   "extends": [":app"],
-  "forkProcessing": "enabled"
+  "forkProcessing": "enabled",
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["maven"],
+      "groupName": "maven"
+    }
+  ]
 }
