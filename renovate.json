@@ -1,5 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "timezone": "Europe/Berlin",
-  "forkProcessing": "enabled"
+  "forkProcessing": "enabled",
+  "extends": ["config:recommended", ":dependencyDashboard"]
 }
