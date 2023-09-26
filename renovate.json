@@ -3,6 +3,7 @@
   "timezone": "Europe/Berlin",
   "forkProcessing": "enabled",
   "prConcurrentLimit": 20,
+  "prHourlyLimit": 100,
   "extends": ["config:recommended", ":dependencyDashboard"],
   "packageRules": [
     {
