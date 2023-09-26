@@ -1,0 +1,54 @@
+name: "Bootstraps the environment"
+description: "Checks out repo, Caches"
+inputs:
+  IDEALOBOT_READ_PACKAGES:
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+        persist-credentials: false
+#    - name: Setup Graphviz
+#      uses: ts-graphviz/setup-graphviz@v1
+    - name: Setup Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: corretto
+        java-version: 17
+        cache: maven
+#    - name: Cache SonarCloud packages
+#      uses: actions/cache@v3
+#      with:
+#        path: ~/.sonar/cache
+#        key: ${{ runner.os }}-sonar
+#        restore-keys: ${{ runner.os }}-sonar
+#    - name: Setup pull credentials for dependencies
+#      uses: de-vri-es/setup-git-credentials@v2
+#      with:
+#        credentials: https://idealobot:${{inputs.IDEALOBOT_READ_REPOS}}@github.com/
+#    - name: Create Maven settings with access to GitHub Packages
+#      uses: whelk-io/maven-settings-xml-action@v21
+#      with:
+#        repositories: >
+#          [
+#            {
+#              "id": "github-dependencies",
+#              "url": "https://maven.pkg.github.com/idealo/*"
+#            }
+#          ]
+#        servers: >
+#          [
+#            {
+#              "id": "github",
+#              "username": "${env.GITHUB_ACTOR}",
+#              "password": "${env.GITHUB_TOKEN}"
+#            },
+#            {
+#              "id": "github-dependencies",
+#              "username": "idealo-github-robot",
+#              "password": "${{ inputs.IDEALOBOT_READ_PACKAGES }}"
+#            }
+#          ]
