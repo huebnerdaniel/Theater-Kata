@@ -6,7 +6,7 @@
   "prHourlyLimit": 100,
   "extends": ["config:recommended", ":dependencyDashboard", ":automergeMinor", ":automergePatch"],
   "automergeSchedule": [
-    "before 6pm on Tuesday"
+    "before 6pm every weekday"
   ],
   "packageRules": [
     {
